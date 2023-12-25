@@ -1,0 +1,17 @@
+@startuml
+start
+
+:Truy cập trang quản lý sản phẩm;
+if (Có sản phẩm) then (Đúng)
+    :Hiển thị danh sách sản phẩm;
+else (Chưa có sản phẩm)
+    :Hiển thị chưa có sản phẩm nào;
+    stop
+endif
+:Nhấn vào sản phẩm cần xem;
+:Hiển thị sản phẩm cần xem;
+
+
+
+stop
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+start
+
+:Người dùng truy cập trang nạp tiền;
+:Hiển thị trang nạp tiền với form (số tiền, phương thức thanh toán);
+:Người dùng chọn phương thức thanh toán (Momo/Vnpay) và nhập số tiền;
+if (Số tiền hợp lệ) then (Hợp lệ)
+    :Người dùng bấm nút "Nạp tiền";
+    :Hệ thống điều hướng đến dịch vụ thanh toán;
+    :Người dùng nhập thông tin thẻ ngân hàng;
+    :Hệ thống trả về người dùng nạp tiền thành công;
+else (Không hợp lệ)
+    :Hệ thống báo lỗi "Số tiền tối thiểu là 50,000 VND";
+endif
+
+stop
+@enduml

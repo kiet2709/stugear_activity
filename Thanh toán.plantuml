@@ -1,0 +1,29 @@
+@startuml
+start
+
+:Người dùng truy cập vào trang \nthông tin chi tiết sản phẩm;
+:Hệ thống hiển thị \ntrang thông tin chi tiết \nsản phẩm \n(nút "Mua ngay", nút "Yêu thích");
+:Người dùng ấn \nvào nút "Mua ngay";
+if (Sản phẩm có phương thức \ngiao dịch là "Trên trang web") then (Có phương thức)
+    :Hệ thống kiểm tra \ntính xác thực của tài khoản\n và điều hướng đến trang thanh toán;
+    :Hệ thống hiển thị \ntrang thanh toán \n(hình ảnh sản phẩm, tên sản phẩm, \nmô tả, thông tin người mua, số lượng, \nđịa chỉ giao hàng, nút "Thanh toán");
+    if (Người dùng đã \nxác thực tài khoản) then (Đã xác thực)
+        if (Người dùng có \nđịa chỉ giao hàng) then (Có địa chỉ)
+            if (Số tiền trong ví đủ) then (Đủ tiền)
+                :Người dùng nhập\n địa chỉ và \nnhấn nút "Thanh toán";
+                :Hệ thống trừ tiền trong ví \ncủa người dùng và chuyển đến \ntrang chi tiết đơn hàng;
+            else (Không đủ tiền)
+                :Hiển thị thông báo \nyêu cầu nạp thêm tiền;
+            endif
+        else (Không có địa chỉ)
+            :Hiển thị thông báo \nyêu cầu người dùng cung cấp\n địa chỉ và ẩn nút "Thanh toán";
+        endif
+    else (Chưa xác thực)
+        :Điều hướng đến trang\n xác thực tài khoản;
+    endif
+else (Không có phương thức)
+    :Hiển thị thông báo không có \nphương thức giao dịch;
+endif
+
+stop
+@enduml

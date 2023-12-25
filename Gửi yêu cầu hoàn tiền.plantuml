@@ -1,0 +1,10 @@
+@startuml
+start
+
+:Người mua truy cập vào mục quản lý đơn hàng;
+:Người mua bấm vào nút "Hoàn tiền trả hàng";
+:Hệ thống kiểm tra và đổi trạng thái đơn hàng thành "Trả hàng hoàn tiền";
+:Hệ thống thông báo người dùng đợi khi đơn hàng có trạng thái kết thúc sẽ trả lại tiền cho người dùng;
+
+stop
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+start
+
+if (Đã đăng ký) then (Đúng)
+    if (Bấm nút "Bán hàng") then (Đúng)
+        :Kiểm tra xác nhận hay chưa;
+        :Nếu chưa gửi mã xác nhận;
+    else (Vừa đăng  ký tài khoản xong)
+        :Gửi mã xác nhận về email;
+    endif
+    :Truy cập email và nhận mã xác nhận;
+    :Nhập mã xác nhận;
+    if (Mã xác nhận đúng) then (Đúng)
+        :Xác thực thành công;
+        :Điều hướng đến trang đăng nhập;
+    else (Sai)
+        :Thông báo lỗi;
+        :Điều hướng đến trang chủ;
+    endif
+else (Sai)
+    :Không gửi email mã xác nhận;
+endif
+
+
+stop
+@enduml

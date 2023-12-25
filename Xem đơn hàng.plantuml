@@ -1,0 +1,20 @@
+@startuml
+start
+
+:Người dùng truy cập vào trang cá nhân;
+:Người dùng bấm nút "Lịch sử đơn hàng";
+:Hệ thống hiển thị bảng các đơn hàng (ID, tên sản phẩm, trạng thái, giá, ngày cập nhật);
+:Người dùng bấm vào chi tiết ở một đơn hàng bất kỳ;
+if (Trạng thái đơn hàng là "đã giao hàng") then (Đã giao hàng)
+    :Hệ thống hiển thị modal nhắc nhở "Xác nhận đã nhận được hàng";
+    if (Người dùng bấm "Xác nhận") then (Xác nhận)
+        :Hệ thống cập nhật trạng thái đơn hàng thành "Đã nhận hàng";
+    else (Không xác nhận)
+        :Không có hành động nào được thực hiện;
+    endif
+else (Không phải "đã giao hàng")
+    :Hệ thống điều hướng người dùng đến trang chi tiết đơn hàng;
+endif
+
+stop
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+start
+
+:Người dùng truy cập vào trang cá nhân;
+:Người dùng bấm nút "Đơn hàng của tôi";
+:Hệ thống hiển thị bảng các đơn hàng (ID, tên sản phẩm, trạng thái, giá, ngày cập nhật);
+:Người dùng thay đổi trạng thái của một đơn hàng bất kỳ thông qua selected box;
+:Hệ thống cập nhật trạng thái đơn hàng trong cơ sở dữ liệu và hiển thị thông báo cập nhật trạng thái đơn hàng thành công;
+
+stop
+@enduml

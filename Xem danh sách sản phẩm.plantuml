@@ -1,0 +1,12 @@
+@startuml
+start
+
+:Người quản lý truy cập vào trang quản lý thông tin sản phẩm;
+if (Có sản phẩm để hiển thị) then (Có)
+    :Hiển thị bảng thông tin sản phẩm (ID, ảnh, tiêu đề, giá, trạng thái, chuyển trạng thái, ngày cập nhật cuối);
+else (Không có sản phẩm)
+    :Hệ thống thông báo "Không có sản phẩm";
+endif
+
+stop
+@enduml

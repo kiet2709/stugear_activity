@@ -1,0 +1,20 @@
+@startuml
+start
+
+:Người quản lý truy cập vào trang quản lý thông tin sản phẩm;
+if (Có sản phẩm để hiển thị) then (Có)
+    :Hiển thị bảng thông tin sản phẩm (ID, ảnh, tiêu đề, giá, trạng thái, chuyển trạng thái, ngày cập nhật cuối);
+    :Người quản lý chọn trạng thái mới tại ô "Chuyển trạng thái";
+    :Hiển thị hộp thoại xác nhận;
+    if (Người quản lý ấn nút "Xác nhận") then (Xác nhận)
+        :Hệ thống cập nhật trạng thái sản phẩm;
+        :Hiển thị trạng thái mới của sản phẩm;
+    else (Hủy)
+        :Hệ thống không tiến hành cập nhật trạng thái;
+    endif
+else (Không có sản phẩm)
+    :Hệ thống thông báo "Không có sản phẩm";
+endif
+
+stop
+@enduml

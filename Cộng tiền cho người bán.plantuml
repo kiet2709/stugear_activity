@@ -1,0 +1,14 @@
+@startuml
+start
+
+:Người mua truy cập vào mục quản lý đơn hàng;
+:Người mua bấm vào nút "Đã nhận được hàng";
+if (Người mua đã nhận được hàng) then (Có)
+    :Hệ thống kiểm tra và hoàn thành kết thúc đơn hàng;
+    :Hệ thống cộng số tiền tương ứng trong đơn hàng vào ví của người bán;
+else (Không)
+    :Sau 7 ngày kể từ ngày kết thúc đơn hàng, hệ thống kiểm tra và tự kết thúc đơn hàng;
+endif
+
+stop
+@enduml

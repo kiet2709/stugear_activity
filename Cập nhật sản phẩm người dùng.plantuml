@@ -1,0 +1,18 @@
+@startuml
+start
+
+:Người dùng truy cập trang quản lý sản phẩm;
+:Hiển thị danh sách sản phẩm (đã duyệt, chưa duyệt, nháp);
+repeat
+:Người dùng chọn sản phẩm cần cập nhật;
+:Hiển thị thông tin chi tiết của sản phẩm;
+:Nhập các trường thông tin cần chỉnh sửa;
+:Ấn nút "Lưu";
+repeat while(Trạng thái sản phẩm là đã duyệt và có trường thông tin bị trống) is (Báo lỗi và không lưu)
+    ->Đúng;
+
+:Cập nhật sản phẩm thành công;
+
+
+stop
+@enduml

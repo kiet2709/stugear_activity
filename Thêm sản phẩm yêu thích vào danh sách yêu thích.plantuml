@@ -1,0 +1,15 @@
+@startuml
+start
+
+:Người dùng truy cập trang sản phẩm;
+:Hiển thị danh sách sản phẩm;
+:Người dùng bấm vào nút "Thêm sản phẩm vào danh sách yêu thích" trên sản phẩm;
+if (Người dùng chọn sản phẩm cụ thể) then (Có)
+    :Hệ thống xử lý và thêm vào danh sách yêu thích thành công;
+else (Không)
+    :Người dùng chọn vào sản phẩm muốn thêm vào danh sách yêu thích;
+    :Hệ thống xử lý và thêm vào danh sách yêu thích thành công;
+endif
+
+stop
+@enduml

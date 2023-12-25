@@ -1,0 +1,24 @@
+@startuml
+start
+
+:Người dùng truy cập trang quản lý sản phẩm yêu thích;
+:Hiển thị danh sách sản phẩm yêu thích (tên, giá, trạng thái);
+while (Người dùng có chọn chức năng Xem hoặc Xóa) is (Có)
+    :Người dùng chọn chức năng (Xem hoặc Xóa);
+    if (Người dùng chọn Xem) then (Xem)
+        :Người dùng chọn sản phẩm trong danh sách;
+        :Hiển thị thông tin chi tiết của sản phẩm;
+    else (Xóa)
+        :Người dùng chọn sản phẩm trong danh sách;
+        :Hiển thị thông báo "Bạn có chắc muốn xóa sản phẩm này khỏi danh sách yêu thích", nút "Hủy" và nút "Đồng ý";
+        if (Người dùng ấn nút "Đồng ý") then (Đồng ý)
+            :Hệ thống thực hiện xóa sản phẩm khỏi danh sách yêu thích;
+            :Hiển thị thông báo xóa thành công;
+        else (Hủy)
+            :Hệ thống hủy xóa và giữ nguyên sản phẩm trong danh sách yêu thích;
+        endif
+    endif
+endwhile
+
+stop
+@enduml

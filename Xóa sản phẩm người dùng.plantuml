@@ -1,0 +1,19 @@
+@startuml
+start
+
+:Người dùng truy cập trang quản lý sản phẩm;
+:Hiển thị danh sách sản phẩm (đã duyệt, chưa duyệt, nháp);
+repeat
+:Người dùng chọn sản phẩm cần xóa;
+:Hiển thị thông tin chi tiết của sản phẩm;
+:Ấn nút "Xóa";
+:Hiển thị hộp thoại "Bạn chắc chắn muốn xóa sản phẩm này?";
+if (Người dùng chọn đồng ý) then (Đồng ý)
+    :Hệ thống tiến hành xóa thành công;
+else (Không đồng ý)
+    :Tắt hộp thoại và giữ nguyên sản phẩm như cũ;
+endif
+repeat while(Chưa chọn sản phẩm hoặc chưa chọn xóa) is (Có)
+
+stop
+@enduml

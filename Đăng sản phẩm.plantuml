@@ -1,0 +1,18 @@
+@startuml
+start
+
+:Chọn mục bán hàng;
+:Điều hướng đến trang tạo sản phẩm;
+repeat
+    :Nhập thông tin sản phẩm;
+    if (Đăng sản phẩm) then (Đúng)
+        :Đăng sản phẩm thành công;
+    else (Lưu nháp)
+        :Lưu nháp thành công;
+    endif
+
+repeat while(Thông tin sai định dạng) is (Đúng)
+
+
+stop
+@enduml

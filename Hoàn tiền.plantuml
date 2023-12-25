@@ -1,0 +1,13 @@
+@startuml
+start
+
+:Quản lý truy cập trang quản lý đơn hàng;
+:Quản lý chọn đơn hàng có trạng thái kết thúc hoàn hàng;
+if (Quản lý đổi trạng thái thành hoàn tiền) then (Đổi trạng thái)
+    :Hệ thống kiểm tra và hoàn tiền tương ứng trên đơn hàng vào ví của người mua;
+else (Không đổi trạng thái)
+    :Sau 7 ngày kể từ ngày đơn hàng có trạng thái kết thúc hoàn hàng, hệ thống tự động đổi thành trạng thái hoàn tiền;
+endif
+
+stop
+@enduml
