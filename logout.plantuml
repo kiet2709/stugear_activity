@@ -1,0 +1,11 @@
+@startuml
+start
+
+:Bấm vào nút ảnh đại diện;
+:Hiển thị danh sách các chức năng;
+:Chọn vào nút “Đăng xuất”;
+:Đăng xuất thành công;
+:Điều hướng đến trang đăng nhập;
+
+
+@enduml

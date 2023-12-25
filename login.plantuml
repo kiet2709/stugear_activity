@@ -1,0 +1,26 @@
+@startuml
+start
+
+:Truy cập trang đăng ký;
+:Hiển thị form đăng ký;
+repeat
+:Nhập các trường thông tin;
+:Ấn nút Đăng ký;
+repeat while(Thông tin không đúng định dạng, bỏ trống, tài khoản đã tồn tại, mật khẩu và nhập lại mật khẩu không khớp) is (Đúng)
+->Sai;
+:Hiển thị đăng ký thành công;
+:Gửi link xác nhận về email;
+:Truy cập vào email và nhận mã xác nhận;
+if (Nhập mã xác nhận) then (Đúng)
+    if (Mã xác nhận đúng) then (Đúng)
+        :Điều hướng đến trang đăng nhập và thông báo đăng ký và xác thực thành công;
+    else (Sai)
+        :Hiển thị thông báo lỗi;
+    endif
+else (Sai)
+    :Không nhập mã xác nhận trong vòng 1 giờ thì hết hạng;
+endif
+
+
+stop
+@enduml

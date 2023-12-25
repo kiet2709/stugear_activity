@@ -1,0 +1,14 @@
+@startuml
+start
+
+:Truy cập trang đăng nhập;
+:Hiển thị form đăng nhập;
+repeat
+:Nhập thông tin đăng nhập;
+:Ấn nút Đăng nhập;
+repeat while(Thông tin bỏ trống, bị sai, tài khoản chưa đăng ký) is (Đúng)
+->Sai;
+:Đưa người dùng vào phần tương thích với vai trò trong hệ thống;
+
+stop
+@enduml
